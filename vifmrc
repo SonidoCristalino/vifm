@@ -1,0 +1,210 @@
+" History length
+set history=100
+
+" Maximum number of changes that can be undone.
+set undolevels=100
+
+" Show list of matches on tab completion in command-line mode
+set wildmenu
+
+" Display completions in a form of popup with descriptions of the matches
+set wildstyle=popup
+
+" Show many columns 
+" set lsview
+
+" Fill files list by columns (not lines). Added in vifm 0.9.1.
+set lsoptions=transposed
+
+" Show status bar
+set laststatus
+
+" Change colorscheme
+colorscheme zenburn
+
+" Information for status bar
+"set statusline="%-35f%10E%20d%15A     |     Free disk space: %8a"
+set statusline="  Hint: %z%= %A %10u:%-7g %15s   [FREE %a] %20d  "
+
+" Show the dot files
+" set dotfiles
+
+" History to save. If you want to save last dir entry, you can use 'savedirs'
+set vifminfo=bookmarks,bmarks,tui,state,cs,dhistory,chistory,shistory,phistory,registers
+
+" Use Vim's format of help file (has highlighting and "hyperlinks").
+set vimhelp
+
+" Format for displaying time in file list. See man date or man strftime for details.
+set timefmt='%d-%m-%Y %H:%M'
+
+" Enable incremental search
+set incsearch
+
+set ignorecase
+
+" Sort by name (ignore case)
+set sort=+iname
+
+" Always show tabs
+set showtabline=always
+set tabscope=pane
+
+" Select and go to next file
+map <space> tj
+
+" Show bookmarks
+map <c-\> :bmarks<cr>
+
+" Select all
+map * ggVG<cr>
+
+" Go to parent directory
+map <bs> gh
+
+" Set directory from other panel
+map <c-s> :cd %D<cr>
+
+" New tab
+map <c-t> :tabnew<cr>
+
+" Close tab
+map <c-w> :tabclose<cr>
+
+" Move between tabs
+"nnoremap <c-w> gt
+nnoremap <c-b> gT
+
+" map <c-l> :cd ""<left>
+
+" Toggle visibility of preview window
+nnoremap w :view<cr>
+vnoremap w :view<cr>gv
+
+" Go to 
+nnoremap gH :cd ~/<cr>
+nnoremap gD :cd ~/Downloads<cr>
+nnoremap gP :cd ~/Pictures<cr>
+nnoremap gT :cd /tmp/<cr>
+nnoremap gC :cd ~/.config<cr>
+nnoremap gV :cd ~/vimwiki<cr>
+
+" Mappings for faster renaming
+nnoremap I cw<c-a>
+nnoremap C cw<c-u>
+nnoremap A cW
+nnoremap O cw
+
+" Open console in current directory
+"nnoremap ,t :!xterm &<cr>
+nnoremap ,sh :shell<cr>
+
+" Display sorting dialog
+nnoremap S :sort<cr>
+
+" Open editor to edit vifmrc and apply settings after returning to vifm
+nnoremap ,c :write | edit $MYVIFMRC | restart full<cr>
+
+" Standard two-panel file managers mappings
+nnoremap <f7> :copy<cr>
+nnoremap <f8> :move<cr>
+nnoremap <f9> :mkdir<space>
+
+" Open current directory in the other pane
+nnoremap <a-i> :sync<cr>
+
+" Open directory under cursor in the other pane
+nnoremap <a-o> :sync %c<cr>
+
+" Swap panes
+nnoremap <c-u> <c-w>x
+
+" ------------------------------------------------------------------------------
+" Panel configuration examples
+" ------------------------------------------------------------------------------
+
+"set lsview  " see binding below
+set lsoptions+=transposed
+set lsoptions+=columncount:2
+
+" Columns format
+set viewcolumns=-60%{name},10%{size},{mtime}
+
+" Show vertical and horizontal borders
+set fillchars=vborder:│,hborder:─
+
+" Filter-out build and temporary files
+" filter! {*.lo,*.o,*.d,*.class,*.pyc,*.pyo,.*~}
+
+" ------------------------------------------------------------------------------
+" Open file with ...
+" ------------------------------------------------------------------------------
+
+" Pdf
+filextype *.pdf 
+	\ zathura %c %i &
+
+" PostScript
+filextype *.ps,*.eps,*.ps.gz
+        \ {View in zathura}
+        \ zathura %f &
+
+" Djvu
+filextype *.djvu
+        \ {View in zathura}
+        \ zathura %f,
+        \ {View in apvlv}
+        \ apvlv %f
+
+" Audio
+filetype *.wav,*.mp3,*.mp4,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+       \ vlc %f %i &
+
+" Images
+filetype *.jpg,*.jpeg,*.png,*.gif,*.bmp,*.tiff,*.tif,*.svg,*.ico,*.xpm
+	\ eog %f &
+
+" Ebooks
+filetype *.azw,*.azw3,*.azw4,*.cbr,*.cbz,*.cb7,*.cbt,*.epub,*.fb2,*.htmlz,*.lit,*.lrf,*.mobi,*.odt,*.pdb,*.prc,*.rtf,*.snb,*.tcr,*.xhtml
+    \ ebook-viewer %f &
+
+" ------------------------------------------------------------------------------
+" Image Preview with vifmrc
+" ------------------------------------------------------------------------------
+
+" Tutorial: https://github.com/thimc/vifmimg
+
+fileviewer *.pdf
+    \ vifmimg pdf %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.djvu
+    \ vifmimg djvu %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer *.epub
+    \ vifmimg epub %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <video/*>
+    \ vifmimg video %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <image/*>
+    \ vifmimg draw %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <audio/*>
+    \ vifmimg audio %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
+
+fileviewer <font/*>
+    \ vifmimg font %px %py %pw %ph %c
+    \ %pc
+    \ vifmimg clear
