@@ -88,6 +88,7 @@ nnoremap gP :cd ~/Pictures<cr>
 nnoremap gT :cd /tmp/<cr>
 nnoremap gC :cd ~/.config<cr>
 nnoremap gW :cd ~/vimwiki<cr>
+nnoremap gS :cd ~/.config/scripts/<cr>
 
 " Mappings for faster renaming
 nnoremap I cw<c-a>
