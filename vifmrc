@@ -133,6 +133,9 @@ nnoremap <c-u> <c-w>x
 
 set trash
 
+" To prevent delete files, and you can restore from trash removed files
+nnoremap DD dd
+
 " ------------------------------------------------------------------------------
 " Panel configuration examples
 " ------------------------------------------------------------------------------
