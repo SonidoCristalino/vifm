@@ -9,7 +9,7 @@ Everything is better near the keyboard!.
 
 ## Installation
 
-1. Please pay close attention to what comes next. You can clone this repository with the next command: 
+1. You can clone this repository with the next command: 
 
      ```bash
      git clone https://github.com/SonidoCristalino/vifm
@@ -20,9 +20,13 @@ Everything is better near the keyboard!.
 
 ## Image preview
 
-The Image preview in some terminals is a big problem and the solution is in the following guide (**warning**:
-this only works with Ubuntu SO using [kitty](https://sw.kovidgoyal.net/kitty/) terminal). Therefore you must
-be careful from here: 
+The Image preview in some terminals is a **big problem** and the solution is in the following guide. For this
+guide we will assume the following:
+
+1. Ubuntu 22.04.03 LTS
+2. We will use [kitty](https://sw.kovidgoyal.net/kitty/) terminal 
+
+Therefore you must be careful from here: 
 
 1. First, you must download the program called [ueberzugpp](https://github.com/jstkdng/ueberzugpp)
 2. Please follow the steps indicated on the page according to your operating system. From here to adopt Ubuntu
@@ -49,3 +53,4 @@ be careful from here:
 * Name: vifm
 * Command: `kitty sh -c "vifmrun"`
 * Shortcut: `Super + r`
+11. Enjoy it!
