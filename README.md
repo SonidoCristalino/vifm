@@ -34,13 +34,13 @@ Therefore you must be careful from here:
 3. Once we generate the repositories within our source.list, we can easily do: `sudo apt-get install
    ueberzugpp`
 4. Then, we must download two scripts from the [vifmimg](https://github.com/thimc/vifmimg) page
-5. Within this page we must download two files: `vifmimg` and `vifmrun`. You must download them in a raw text. 
+5. Within this page we must download two scripts: `vifmimg` and `vifmrun`. You must download them in a raw text. 
 6. Then, you must copy them to a directory that is into `$PATH`, just like `/usr/local/bin`. 
-7. After having copied to this `/usr/local/bin/` directory, we must give it execution permits as follows:
+7. After having copied to this `/usr/local/bin/` directory, we must give it execution access as follows:
    `chmod a+x vifmimg` and `chmod a+x vifmrun` 
-8. As our terminal is kitty, so we must follow the following comment: https://github.com/jstkdng/ueberzugpp/issues/81#issuecomment-1623923211
-9. As we can see, we need to create a file into `$HOME/.config/ueberzugpp/config.json` with the following
-   text: 
+8. As our terminal is kitty, so we must follow the following comment:
+   https://github.com/jstkdng/ueberzugpp/issues/81#issuecomment-1623923211    As we can see, we need to create
+   a file into `$HOME/.config/ueberzugpp/config.json` with the following text: 
    
      ```bash
      {
@@ -49,8 +49,8 @@ Therefore you must be careful from here:
         }
      }
      ```
-10. Finally we can generate a trigger from Gnome as follows: 
+9. Finally we can generate a trigger from Gnome as follows: 
 * Name: vifm
 * Command: `kitty sh -c "vifmrun"`
 * Shortcut: `Super + r`
-11. Enjoy it!
+1. Enjoy it!
