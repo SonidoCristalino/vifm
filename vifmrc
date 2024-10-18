@@ -26,7 +26,7 @@ colorscheme zenburn
 "set statusline="%-35f%10E%20d%15A     |     Free disk space: %8a"
 set statusline="  Hint: %z%= %A %10u:%-7g %15s   [FREE %a] %20d  "
 
-" Show the dot files
+" Show the dot files. Press 'za' for toogle dot files. 
 " set dotfiles
 
 " History to save. If you want to save last dir entry, you can use 'savedirs'
