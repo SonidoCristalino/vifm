@@ -96,7 +96,7 @@ nnoremap C cw<c-u>
 nnoremap A cW
 nnoremap O cw
 
-" Open console in current directory
+" Open console/terminal in current directory
 "nnoremap ,t :!xterm &<cr>
 nnoremap ,sh :shell<cr>
 
