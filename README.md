@@ -49,8 +49,9 @@ Therefore you must be careful from here:
         }
      }
      ```
-9. Finally we can generate a trigger from Gnome as follows: 
+9. Also, you need install **ffmpegthumbnailer** to get video preview when you select a video with `vifm`. 
+10. Finally we can generate a trigger from Gnome as follows: 
 * Name: vifm
 * Command: `kitty sh -c "vifmrun"`
 * Shortcut: `Super + r`
-1. Enjoy it!
+11. Enjoy it!
