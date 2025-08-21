@@ -184,6 +184,10 @@ filetype *.jpg,*.jpeg,*.png,*.gif,*.bmp,*.tiff,*.tif,*.svg,*.ico,*.xpm
 filetype *.azw,*.azw3,*.azw4,*.cbr,*.cbz,*.cb7,*.cbt,*.epub,*.fb2,*.htmlz,*.lit,*.lrf,*.mobi,*.odt,*.pdb,*.prc,*.rtf,*.snb,*.tcr,*.xhtml
     \ ebook-viewer %f &
 
+" LibreOffice Calc
+filetype *.xls,*.xlsx,*.ods,*.csv
+    \ libreoffice %f &
+
 " ------------------------------------------------------------------------------
 " Image Preview with vifmrc
 " ------------------------------------------------------------------------------
