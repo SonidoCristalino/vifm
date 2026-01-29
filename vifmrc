@@ -89,6 +89,7 @@ nnoremap gT :cd /tmp/<cr>
 nnoremap gC :cd ~/.config<cr>
 nnoremap gW :cd ~/.vimwiki<cr>
 nnoremap gL :cd ~/.vimwiki_laboral<cr>
+nnoremap gaL :cd ~/.vimwiki_laboral/TrabajoRemoto/AnotacionesLaborales<cr>
 nnoremap gS :cd ~/.config/scripts/<cr>
 
 " Mappings for faster renaming
