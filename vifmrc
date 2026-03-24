@@ -44,7 +44,9 @@ set incsearch
 set ignorecase
 
 " Sort by name (ignore case)
-set sort=+iname
+" set sort=+iname
+" Sort by modification time 
+set sort=-mtime
 
 " Always show tabs
 set showtabline=always
