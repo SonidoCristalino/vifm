@@ -93,6 +93,7 @@ nnoremap gW :cd ~/.vimwiki<cr>
 nnoremap gL :cd ~/.vimwiki_laboral<cr>
 nnoremap gaL :cd ~/.vimwiki_laboral/Remoto/AnotacionesLaborales<cr>
 nnoremap gS :cd ~/.config/scripts/<cr>
+nnoremap gp :cd ~/Public<cr>
 
 " Mappings for faster renaming
 nnoremap I cw<c-a>
