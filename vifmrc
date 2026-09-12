@@ -178,7 +178,7 @@ filextype *.djvu
         \ apvlv %f
 
 " Audio
-filetype *.wav,*.mp3,*.mp4,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
+filetype *.wav,*.mp3,*.flac,*.m4a,*.wma,*.ape,*.ac3,*.og[agx],*.spx,*.opus
        \ vlc %f %i &
 
 " Images
@@ -192,6 +192,13 @@ filetype *.azw,*.azw3,*.azw4,*.cbr,*.cbz,*.cb7,*.cbt,*.epub,*.fb2,*.htmlz,*.lit,
 " LibreOffice Calc
 filetype *.xls,*.xlsx,*.ods,*.csv
     \ libreoffice %f &
+
+" Video
+filextype <video/*>,*.mp4,*.mkv,*.avi,*.mov,*.webm,*.flv,*.wmv,*.m4v
+        \ {Reproducir con mpv}
+        \ mpv %f %i &,
+        \ {Reproducir con Totem}
+        \ totem %f &
 
 " ------------------------------------------------------------------------------
 " Image Preview with vifmrc
