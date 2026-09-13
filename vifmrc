@@ -187,11 +187,11 @@ filetype *.jpg,*.jpeg,*.png,*.gif,*.bmp,*.tiff,*.tif,*.svg,*.ico,*.xpm
 
 " Ebooks
 filetype *.azw,*.azw3,*.azw4,*.cbr,*.cbz,*.cb7,*.cbt,*.epub,*.fb2,*.htmlz,*.lit,*.lrf,*.mobi,*.odt,*.pdb,*.prc,*.rtf,*.snb,*.tcr,*.xhtml
-    \ ebook-viewer %f &
+    \ ebook-viewer %f %i &
 
 " LibreOffice Calc
 filetype *.xls,*.xlsx,*.ods,*.csv
-    \ libreoffice %f &
+    \ libreoffice %f %i &
 
 " Video
 filextype <video/*>,*.mp4,*.mkv,*.avi,*.mov,*.webm,*.flv,*.wmv,*.m4v
